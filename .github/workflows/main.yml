@@ -45,7 +45,7 @@ jobs:
             --instance-ids {i-0c10f76ea09be3b68} \
             --document-name "AWS-RunShellScript" \
             --parameters "commands=[
-              'if sudo docker ps -a --format \\'{{.Names}}\\' | grep -q \ '^server$\\'; then',
+              'if sudo docker ps -a --format \\'{{.Names}}\\' | grep -q \'^server$\\'; then',
               '  sudo docker stop server',
               '  sudo docker rm server',
               'fi',
