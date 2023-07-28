@@ -42,7 +42,7 @@ jobs:
           AWS_REGION: ap-northeast-2
         run: |
           aws ssm send-command \
-            --instance-ids {i-0c10f76ea09be3b68} \
+            --instance-ids i-0c10f76ea09be3b68 \
             --document-name "AWS-RunShellScript" \
             --parameters "commands=[
               'if sudo docker ps -a --format \\'{{.Names}}\\' | grep -q \'^server$\\'; then',
